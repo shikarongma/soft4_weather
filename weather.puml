@@ -1,0 +1,194 @@
+@startuml
+interface com.WeatherWebService {
++ java.lang.String getWeatherWebServiceSoap12Address()
++ com.WeatherWebServiceSoap_PortType getWeatherWebServiceSoap12()
++ com.WeatherWebServiceSoap_PortType getWeatherWebServiceSoap12(java.net.URL)
++ java.lang.String getWeatherWebServiceSoapAddress()
++ com.WeatherWebServiceSoap_PortType getWeatherWebServiceSoap()
++ com.WeatherWebServiceSoap_PortType getWeatherWebServiceSoap(java.net.URL)
+}
+
+class com.GetWeatherbyCityNameResponse {
+- java.lang.String[] getWeatherbyCityNameResult
+- java.lang.Object __equalsCalc
+- boolean __hashCodeCalc
+- {static} org.apache.axis.description.TypeDesc typeDesc
++ java.lang.String[] getGetWeatherbyCityNameResult()
++ void setGetWeatherbyCityNameResult(java.lang.String[])
++ boolean equals(java.lang.Object)
++ int hashCode()
++ {static} org.apache.axis.description.TypeDesc getTypeDesc()
++ {static} org.apache.axis.encoding.Serializer getSerializer(java.lang.String,java.lang.Class,javax.xml.namespace.QName)
++ {static} org.apache.axis.encoding.Deserializer getDeserializer(java.lang.String,java.lang.Class,javax.xml.namespace.QName)
+}
+
+
+class com.GetWeatherbyCityNameProResponse {
+- java.lang.String[] getWeatherbyCityNameProResult
+- java.lang.Object __equalsCalc
+- boolean __hashCodeCalc
+- {static} org.apache.axis.description.TypeDesc typeDesc
++ java.lang.String[] getGetWeatherbyCityNameProResult()
++ void setGetWeatherbyCityNameProResult(java.lang.String[])
++ boolean equals(java.lang.Object)
++ int hashCode()
++ {static} org.apache.axis.description.TypeDesc getTypeDesc()
++ {static} org.apache.axis.encoding.Serializer getSerializer(java.lang.String,java.lang.Class,javax.xml.namespace.QName)
++ {static} org.apache.axis.encoding.Deserializer getDeserializer(java.lang.String,java.lang.Class,javax.xml.namespace.QName)
+}
+
+
+class com.WeatherWebServiceSoap_BindingStub {
+- java.util.Vector cachedSerClasses
+- java.util.Vector cachedSerQNames
+- java.util.Vector cachedSerFactories
+- java.util.Vector cachedDeserFactories
+~ {static} org.apache.axis.description.OperationDesc[] _operations
+- {static} void _initOperationDesc1()
+# org.apache.axis.client.Call createCall()
++ java.lang.String[] getSupportCity(java.lang.String)
++ java.lang.String[] getSupportProvince()
++ GetSupportDataSetResponse getSupportDataSet()
++ java.lang.String[] getWeatherbyCityName(java.lang.String)
++ java.lang.String[] getWeatherbyCityNamePro(java.lang.String,java.lang.String)
+}
+
+
+class com.GetWeatherbyCityNamePro {
+- java.lang.String theCityName
+- java.lang.String theUserID
+- java.lang.Object __equalsCalc
+- boolean __hashCodeCalc
+- {static} org.apache.axis.description.TypeDesc typeDesc
++ java.lang.String getTheCityName()
++ void setTheCityName(java.lang.String)
++ java.lang.String getTheUserID()
++ void setTheUserID(java.lang.String)
++ boolean equals(java.lang.Object)
++ int hashCode()
++ {static} org.apache.axis.description.TypeDesc getTypeDesc()
++ {static} org.apache.axis.encoding.Serializer getSerializer(java.lang.String,java.lang.Class,javax.xml.namespace.QName)
++ {static} org.apache.axis.encoding.Deserializer getDeserializer(java.lang.String,java.lang.Class,javax.xml.namespace.QName)
+}
+
+
+class com.WeatherWebServiceSoap12Stub {
+- java.util.Vector cachedSerClasses
+- java.util.Vector cachedSerQNames
+- java.util.Vector cachedSerFactories
+- java.util.Vector cachedDeserFactories
+~ {static} org.apache.axis.description.OperationDesc[] _operations
+- {static} void _initOperationDesc1()
+# org.apache.axis.client.Call createCall()
++ java.lang.String[] getSupportCity(java.lang.String)
++ java.lang.String[] getSupportProvince()
++ GetSupportDataSetResponse getSupportDataSet()
++ java.lang.String[] getWeatherbyCityName(java.lang.String)
++ java.lang.String[] getWeatherbyCityNamePro(java.lang.String,java.lang.String)
+}
+
+
+class com.GetWeatherbyCityName {
+- java.lang.String theCityName
+- java.lang.Object __equalsCalc
+- boolean __hashCodeCalc
+- {static} org.apache.axis.description.TypeDesc typeDesc
++ java.lang.String getTheCityName()
++ void setTheCityName(java.lang.String)
++ boolean equals(java.lang.Object)
++ int hashCode()
++ {static} org.apache.axis.description.TypeDesc getTypeDesc()
++ {static} org.apache.axis.encoding.Serializer getSerializer(java.lang.String,java.lang.Class,javax.xml.namespace.QName)
++ {static} org.apache.axis.encoding.Deserializer getDeserializer(java.lang.String,java.lang.Class,javax.xml.namespace.QName)
+}
+
+
+interface com.WeatherWebServiceSoap_PortType {
++ java.lang.String[] getSupportCity(java.lang.String)
++ java.lang.String[] getSupportProvince()
++ GetSupportDataSetResponse getSupportDataSet()
++ java.lang.String[] getWeatherbyCityName(java.lang.String)
++ java.lang.String[] getWeatherbyCityNamePro(java.lang.String,java.lang.String)
+}
+
+class example.HelloWorldClient {
++ {static} void main(String[])
++ {static} String[] QueryWeatherForecastInfo(String)
+}
+
+class com.DataSet {
+- org.apache.axis.message.MessageElement[] _any
+- java.lang.Object __equalsCalc
+- boolean __hashCodeCalc
+- {static} org.apache.axis.description.TypeDesc typeDesc
++ org.apache.axis.message.MessageElement[] get_any()
++ void set_any(org.apache.axis.message.MessageElement[])
++ boolean equals(java.lang.Object)
++ int hashCode()
++ {static} org.apache.axis.description.TypeDesc getTypeDesc()
++ {static} org.apache.axis.encoding.Serializer getSerializer(java.lang.String,java.lang.Class,javax.xml.namespace.QName)
++ {static} org.apache.axis.encoding.Deserializer getDeserializer(java.lang.String,java.lang.Class,javax.xml.namespace.QName)
+}
+
+
+class com.GetSupportDataSetResponse {
+- org.apache.axis.message.MessageElement[] _any
+- java.lang.Object __equalsCalc
+- boolean __hashCodeCalc
+- {static} org.apache.axis.description.TypeDesc typeDesc
++ org.apache.axis.message.MessageElement[] get_any()
++ void set_any(org.apache.axis.message.MessageElement[])
++ boolean equals(java.lang.Object)
++ int hashCode()
++ {static} org.apache.axis.description.TypeDesc getTypeDesc()
++ {static} org.apache.axis.encoding.Serializer getSerializer(java.lang.String,java.lang.Class,javax.xml.namespace.QName)
++ {static} org.apache.axis.encoding.Deserializer getDeserializer(java.lang.String,java.lang.Class,javax.xml.namespace.QName)
+}
+
+
+class com.WeatherWebServiceLocator {
+- java.lang.String WeatherWebServiceSoap12_address
+- java.lang.String WeatherWebServiceSoap12WSDDServiceName
+- java.lang.String WeatherWebServiceSoap_address
+- java.lang.String WeatherWebServiceSoapWSDDServiceName
+- java.util.HashSet ports
++ java.lang.String getWeatherWebServiceSoap12Address()
++ java.lang.String getWeatherWebServiceSoap12WSDDServiceName()
++ void setWeatherWebServiceSoap12WSDDServiceName(java.lang.String)
++ com.WeatherWebServiceSoap_PortType getWeatherWebServiceSoap12()
++ com.WeatherWebServiceSoap_PortType getWeatherWebServiceSoap12(java.net.URL)
++ void setWeatherWebServiceSoap12EndpointAddress(java.lang.String)
++ java.lang.String getWeatherWebServiceSoapAddress()
++ java.lang.String getWeatherWebServiceSoapWSDDServiceName()
++ void setWeatherWebServiceSoapWSDDServiceName(java.lang.String)
++ com.WeatherWebServiceSoap_PortType getWeatherWebServiceSoap()
++ com.WeatherWebServiceSoap_PortType getWeatherWebServiceSoap(java.net.URL)
++ void setWeatherWebServiceSoapEndpointAddress(java.lang.String)
++ java.rmi.Remote getPort(Class)
++ java.rmi.Remote getPort(javax.xml.namespace.QName,Class)
++ javax.xml.namespace.QName getServiceName()
++ java.util.Iterator getPorts()
++ void setEndpointAddress(java.lang.String,java.lang.String)
++ void setEndpointAddress(javax.xml.namespace.QName,java.lang.String)
+}
+
+
+
+
+com.Service <|-- com.WeatherWebService
+com.Serializable <|.. com.GetWeatherbyCityNameResponse
+com.Serializable <|.. com.GetWeatherbyCityNameProResponse
+com.WeatherWebServiceSoap_PortType <|.. com.WeatherWebServiceSoap_BindingStub
+com.Stub <|-- com.WeatherWebServiceSoap_BindingStub
+com.Serializable <|.. com.GetWeatherbyCityNamePro
+com.WeatherWebServiceSoap_PortType <|.. com.WeatherWebServiceSoap12Stub
+com.Stub <|-- com.WeatherWebServiceSoap12Stub
+com.Serializable <|.. com.GetWeatherbyCityName
+com.Remote <|-- com.WeatherWebServiceSoap_PortType
+com.Serializable <|.. com.DataSet
+com.AnyContentType <|.. com.DataSet
+com.Serializable <|.. com.GetSupportDataSetResponse
+com.AnyContentType <|.. com.GetSupportDataSetResponse
+com.WeatherWebService <|.. com.WeatherWebServiceLocator
+com.Service <|-- com.WeatherWebServiceLocator
+@enduml
